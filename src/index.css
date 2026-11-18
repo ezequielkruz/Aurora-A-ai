@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-aurora-purple: #4A154B;
+  --color-aurora-purple-dark: #360E37;
+  --color-aurora-lilac: #F3E8F4;
+  --color-aurora-sun: #F59E0B;
+  --color-aurora-orange: #EA580C;
+}
+
+:root {
+  --aurora-page-bg: #D2BCD8;
+  --aurora-card-bg: #F6EDF8;
+  --aurora-card-border: #BA9DC4;
+  --aurora-card-hover: #9E78AD;
+  --aurora-divider: #D9C4E1;
+  --aurora-pill-bg: #E9D9EE;
+  --aurora-pill-active-bg: #FCF8FD;
+  --aurora-table-head-bg: #EBDCF0;
+  --aurora-input-bg: #FCF8FD;
+  --aurora-input-border: #C8B0D2;
+  --aurora-sidebar-bg: #4A154B;
+  --aurora-sidebar-card: #360E37;
+  --aurora-sidebar-active-bg: #F3E8F4;
+  --aurora-sidebar-active-text: #4A154B;
+  --aurora-header-bg: rgba(237, 224, 242, 0.96);
+  --aurora-header-border: #BA9DC4;
+  --aurora-header-title: #0f172a;
+  --aurora-header-subtitle: #475569;
+  --aurora-header-btn-bg: #FAF5FC;
+  --aurora-header-btn-text: #334155;
+  --aurora-header-btn-border: #C5ABD0;
+  --aurora-header-btn-hover: #E7D4EE;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+body, html, #root {
+  background-color: var(--aurora-page-bg) !important;
+  min-height: 100vh;
+  transition: background-color 220ms ease;
+}
+
+.aurora-page-bg {
+  background-color: var(--aurora-page-bg) !important;
+  transition: background-color 220ms ease;
+}
+
+.aurora-card {
+  background-color: var(--aurora-card-bg);
+  border-color: var(--aurora-card-border);
+  transition: background-color 220ms ease, border-color 220ms ease;
+}
+
+.aurora-card-hover:hover {
+  border-color: var(--aurora-card-hover);
+}
+
+.aurora-divider {
+  border-color: var(--aurora-divider);
+}
+
+.aurora-pill-group {
+  background-color: var(--aurora-pill-bg);
+}
+
+.aurora-pill-active {
+  background-color: var(--aurora-pill-active-bg);
+  color: var(--aurora-sidebar-active-text);
+}
+
+.aurora-table-head {
+  background-color: var(--aurora-table-head-bg);
+  border-color: var(--aurora-divider);
+}
+
+.aurora-input {
+  background-color: var(--aurora-input-bg);
+  border-color: var(--aurora-input-border);
+}
+
+.aurora-sidebar {
+  background-color: var(--aurora-sidebar-bg);
+  transition: background-color 220ms ease;
+}
+
+.aurora-sidebar-card {
+  background-color: var(--aurora-sidebar-card);
+}
+
+.aurora-sidebar-nav-active {
+  background-color: var(--aurora-sidebar-active-bg);
+  color: var(--aurora-sidebar-active-text);
+}
+
+.aurora-header {
+  background-color: var(--aurora-header-bg);
+  border-color: var(--aurora-header-border);
+  transition: background-color 220ms ease, border-color 220ms ease;
+}
+
+.aurora-header-btn {
+  background-color: var(--aurora-header-btn-bg);
+  color: var(--aurora-header-btn-text);
+  border-color: var(--aurora-header-btn-border);
+}
+
+.aurora-header-btn:hover {
+  background-color: var(--aurora-header-btn-hover);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
